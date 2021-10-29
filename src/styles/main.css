@@ -66,8 +66,9 @@ body {
     width: 120px;
     top: 0;
     left: 25%;
-    transform: translateY(30px);
+    transform: translateY(30px) rotate(0deg);
     animation: moon-animation 1.5s;
+    transition: .2s ease-in-out;
 }
 
 @keyframes moon-animation {
@@ -238,6 +239,12 @@ body {
 
 .socials img {
     width: 40px;
+    transform: translateY(0px);
+    transition: .2s ease-in-out;
+}
+
+.socials img:hover {
+    transform: translateY(-15px);
 }
 
 .socials img:nth-child(1) {
