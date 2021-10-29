@@ -61,8 +61,8 @@ export default function MainPage() {
                 {!isMob ? 
                     <div>
                         <img src={Mountain1} style={move ? {transform: `translateX(${0-mousePos.left/20}px) translateY(${240+mousePos.top/20}px)`} : {transform: `translateX(0px) translateY(240px)`}} alt=""/>
-                        <img src={Mountain2} style={move ? {transform: `translateX(${-60+mousePos.left/30}px) translateY(${0-mousePos.top/30}px)`} : {transform: `translateX(-60px) translateY(0px)`}} alt=""/>
-                        <img src={BogdanDesktop} style={move ? {transform: `translateX(${-60+mousePos.left/30}px) translateY(${0-mousePos.top/30}px)`} : {transform: `translateX(-60px) translateY(0px)`}} alt="" />
+                        <img src={Mountain2} style={move ? {transform: `translateX(${-60-mousePos.left/30}px) translateY(${0-mousePos.top/30}px)`} : {transform: `translateX(-60px) translateY(0px)`}} alt=""/>
+                        <img src={BogdanDesktop} style={move ? {transform: `translateX(${-60-mousePos.left/30}px) translateY(${0-mousePos.top/30}px)`} : {transform: `translateX(-60px) translateY(0px)`}} alt="" />
                     </div>
                     :
                     <div>
