@@ -2,7 +2,7 @@ import React from 'react'
 import {useEffect, useState, useCallback} from 'react';
 import '../styles/main.css';
 import Mountain1 from '../resources/mountain-1.svg';
-import Mountain2 from '../resources/mountain-2.png';
+import Mountain2 from '../resources/mountain-2.svg';
 import Mountain1Mob from '../resources/mountain-1mob.svg';
 import Mountain2Mob from '../resources/mountain-2mob.svg';
 import Moon from '../resources/moon.svg';
@@ -10,6 +10,7 @@ import Drumstick from '../resources/drumstick.svg';
 import JeimipLogo from '../resources/jeimipLogo.png';
 import TickIcon from '../resources/tick.png';
 import Bogdan from '../resources/iAM.png';
+import BogdanDesktop from '../resources/bogdan.png';
 
 import instagram from '../resources/instagram.svg';
 import telegram from '../resources/telegram.svg';
@@ -20,14 +21,14 @@ import code from '../resources/code.png';
 import debian from '../resources/debian.png';
 import drums from '../resources/drum.png';
 
-import js from '../resources/js.svg';
-import java from '../resources/java.svg';
-import cpp from '../resources/cpp.svg';
-import c from '../resources/c.svg';
-import csharp from '../resources/csharp.svg';
-import python from '../resources/python.svg';
-import php from '../resources/php.svg';
-import bash from '../resources/bash.svg';
+// import js from '../resources/js.svg';
+// import java from '../resources/java.svg';
+// import cpp from '../resources/cpp.svg';
+// import c from '../resources/c.svg';
+// import csharp from '../resources/csharp.svg';
+// import python from '../resources/python.svg';
+// import php from '../resources/php.svg';
+// import bash from '../resources/bash.svg';
 
 export default function MainPage() {
     const [mousePos, setMousePos] = useState({left:0, top: 0});
@@ -61,6 +62,7 @@ export default function MainPage() {
                     <div>
                         <img src={Mountain1} style={move ? {transform: `translateX(${0-mousePos.left/20}px) translateY(${240+mousePos.top/20}px)`} : {transform: `translateX(0px) translateY(240px)`}} alt=""/>
                         <img src={Mountain2} style={move ? {transform: `translateX(${-60+mousePos.left/30}px) translateY(${0-mousePos.top/30}px)`} : {transform: `translateX(-60px) translateY(0px)`}} alt=""/>
+                        <img src={BogdanDesktop} style={move ? {transform: `translateX(${-60+mousePos.left/30}px) translateY(${0-mousePos.top/30}px)`} : {transform: `translateX(-60px) translateY(0px)`}} alt="" />
                     </div>
                     :
                     <div>

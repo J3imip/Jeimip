@@ -31,6 +31,17 @@ body {
     animation: mountain2-animation 1s;
     transform: translateX(-60px);
 }
+.mountains img:nth-child(3){
+    user-select: none;
+    -webkit-user-drag: none;
+    /* z-index: 1; */
+    position: fixed;
+    left: 50%;
+    bottom: -3.3%;
+    width: 33vw;
+    animation: title-animation 1s;
+    transform: translateX(-60px);
+}
 
 
 @keyframes mountain1-animation {
@@ -54,6 +65,7 @@ body {
     position: absolute;
     width: 120px;
     top: 0;
+    left: 25%;
     transform: translateY(30px);
     animation: moon-animation 1.5s;
 }
@@ -410,6 +422,7 @@ body {
         backdrop-filter: blur(10px);
         border-radius: 8px;
         animation: title-animation 0.5s ease-in-out;
+        overflow: scroll;
     }
     .title-container {
         position: initial;
@@ -425,6 +438,7 @@ body {
     }
     .title-container .name {
         font-size: 32px;
+        padding-top: 5%;
     }
     .title-container .speciality {
         font-size: 20px;
@@ -443,7 +457,7 @@ body {
         align-items: center;
         justify-content: center;
         text-align: center;
-        width: 90%;
+        width: 88%;
         animation: title-animation 1s ease-in-out;
     }
     .about-mob .about-title {
@@ -459,7 +473,7 @@ body {
         margin-top: 5%;
         line-height: 22px;
         font-weight: 100;
-        font-size: 14px;
+        font-size: 16px;
     }
     .socials-mob {
         margin-top: 5%;
@@ -469,7 +483,7 @@ body {
         animation: title-animation 1s ease-in-out;
     }
     .socials-mob img {
-        margin-left: 2%;
+        margin-left: 5%;
         width: 20px;
     }
     .social-btn {
@@ -496,6 +510,7 @@ body {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 4px;
         animation: title-animation 1s ease-in-out;
+        margin-bottom: 10%;
     }
 
     .social-btn.instagram {
