@@ -46,7 +46,7 @@ export default function MainPage() {
     return(
         <div className="main-container">
             <img className="moon" src={Moon} alt=""/>
-            <div class="langs">
+            {/* <div class="langs">
                 <img src={js} alt=""/>
                 <img src={java} alt=""/>
                 <img src={cpp} alt=""/>
@@ -55,7 +55,7 @@ export default function MainPage() {
                 <img src={python} alt=""/>
                 <img src={php} alt=""/>
                 <img src={bash} alt=""/>
-            </div>
+            </div> */}
             <div class="mountains">
                 {!isMob ? 
                     <div>
