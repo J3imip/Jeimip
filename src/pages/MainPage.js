@@ -112,7 +112,7 @@ export default function MainPage() {
                     <div class="title-container">
                         <img src={Bogdan} alt=""/>
                         <div class="name">Богдан Кучма</div>
-                        <div class="speciality"><img src={TickIcon} alt=""/>Fullstack web-разработчик</div>
+                        <div class="speciality">Fullstack web-разработчик</div>
                     </div>
                     <div className="about-mob">
                         <div className="about-title">О себе:</div>
