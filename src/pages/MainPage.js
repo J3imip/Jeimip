@@ -40,7 +40,7 @@ export default function MainPage() {
         document.addEventListener('mousemove', (e)=>{setMousePos({left:e.pageX, top:e.pageY})});
         window.addEventListener("resize", e=>{window.location.reload()});
 
-        if(window.orientation==90 && window.innerWidth<=812) {
+        if(window.orientation==90 && window.innerWidth<1024) {
             setIsMob(true);
         }
 

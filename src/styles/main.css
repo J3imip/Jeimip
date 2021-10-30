@@ -574,22 +574,14 @@ body {
     }
     .moon {
         width: 80px;
-        left: 20%;
-        top: 5%;
+        left: 25%;
+        top: 2%;
     }
-    .mountains img:first-child{
-        left: 0;
-        bottom: -20%;
-        animation: mountain1-animation 1.5s;
-        transform: translateY(0px);
+    .mountains img:nth-child(1) {
+        bottom: 20%;
     }
-    
-    .mountains img:nth-child(2){
-        left: 0;
-        bottom: -10%;
-        width: 125vw;
-        animation: mountain2-animation 1s;
-        transform: translateY(0px);
+    .mountains img:nth-child(2) {
+        bottom: -40%;
     }
     .mountains img:nth-child(3){
         display: none;
@@ -874,7 +866,7 @@ body {
         width: 30%;
     }
     .moon {
-        width: 80px;
+        width: 15%;
         left: 20%;
         top: 5%;
     }
