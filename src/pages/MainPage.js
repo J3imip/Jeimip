@@ -33,14 +33,14 @@ import drums from '../resources/drum.png';
 export default function MainPage() {
     const [mousePos, setMousePos] = useState({left:0, top: 0});
     const [move, setMove] = useState(false);
-    const [isMob, setMob] = useState(false);
+    const [limits, setLimits] = useState({x: 60, y: 240});
 
     useEffect(() => {
-        document.addEventListener('mousemove', (e)=>{setMousePos({left:e.pageX, top:e.pageY})})
-        if(window.innerWidth<=768) setMob(true);
+        document.addEventListener('mousemove', (e)=>{setMousePos({left:e.pageX, top:e.pageY})});
 
         setInterval(() => {
-            setMove(true);
+            if(window.innerWidth<1024)setMove(true);
+            else if(window.screen.orientation.type=="portrait-primary") setLimits({x: 0, y: 0});
         }, 1500);
     }, [])
 
@@ -58,11 +58,11 @@ export default function MainPage() {
                 <img src={bash} alt=""/>
             </div> */}
             <div class="mountains">
-                {!isMob ? 
+                {window.innerWidth>768 ? 
                     <div>
-                        <img src={Mountain1} style={move ? {transform: `translateX(${0-mousePos.left/20}px) translateY(${240+mousePos.top/20}px)`} : {transform: `translateX(0px) translateY(240px)`}} alt=""/>
-                        <img src={Mountain2} style={move ? {transform: `translateX(${-60-mousePos.left/30}px) translateY(${0-mousePos.top/30}px)`} : {transform: `translateX(-60px) translateY(0px)`}} alt=""/>
-                        <img src={BogdanDesktop} style={move ? {transform: `translateX(${-60-mousePos.left/30}px) translateY(${0-mousePos.top/30}px)`} : {transform: `translateX(-60px) translateY(0px)`}} alt="" />
+                        <img src={Mountain1} style={move ? {transform: `translateX(${0-mousePos.left/20}px) translateY(${limits.y+mousePos.top/20}px)`} : {transform: `translateX(0px) translateY(${limits.y}px)`}} alt=""/>
+                        <img src={Mountain2} style={move ? {transform: `translateX(${-limits.x-mousePos.left/30}px) translateY(${0-mousePos.top/30}px)`} : {transform: `translateX(-${limits.x}px) translateY(0px)`}} alt=""/>
+                        <img src={BogdanDesktop} style={move ? {transform: `translateX(${-limits.x+mousePos.left/30}px) translateY(${0-mousePos.top/30}px)`} : {transform: `translateX(-${limits.x}px) translateY(0px)`}} alt="" />
                     </div>
                     :
                     <div>
@@ -72,7 +72,7 @@ export default function MainPage() {
                 }
             </div>
 
-            {window.innerWidth>=768 ? 
+            {window.innerWidth>768 ? 
                 <div>
                     <div class="title-container">
                         <div class="icons-row">

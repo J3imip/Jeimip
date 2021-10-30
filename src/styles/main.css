@@ -36,7 +36,7 @@ body {
     -webkit-user-drag: none;
     /* z-index: 1; */
     position: fixed;
-    left: 50%;
+    right: 17%;
     bottom: -3.3%;
     width: 33vw;
     animation: title-animation 1s;
@@ -150,7 +150,7 @@ body {
     top: 7%;
     right: 2%;
     font-weight: 800;
-    font-size: 60px;
+    font-size: 2em;
     color: #FFFBDC;
     display: flex;
     align-items: flex-end;
@@ -175,7 +175,7 @@ body {
 .title-container .speciality {
     font-family: Rubik;
     font-weight: 700;
-    font-size: 38px;
+    font-size: 1.2em;
 }
 
 .title-container .speciality img {
@@ -194,7 +194,7 @@ body {
 .title-container .resume {
     z-index: 1;
     margin-top: 40px;
-    font-size: 34px;
+    font-size: 1.1em;
     font-family: Rubik;
     background-color: #4A47CD;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -269,6 +269,9 @@ body {
 .socials {
     flex-direction: row;
     display: flex;
+    /* position: fixed;
+    bottom: 30%;
+    right: 5%; */
     margin-right: 10%;
     margin-top: -4%;
 }
@@ -315,7 +318,7 @@ body {
     margin-top: 140%;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) and (orientation: portrait) {
     @keyframes moon-animation {
         0% {
             transform: translateY(500px);
@@ -441,10 +444,10 @@ body {
         margin-top: 5%;
     }
     .title-container img {
-        width: 100px;
+        width: 30%;
     }
     .title-container .name {
-        font-size: 32px;
+        font-size: 1em;
         padding-top: 5%;
     }
     .title-container .speciality {
@@ -452,7 +455,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 20px;
+        font-size: 0.62em;
     }
     .title-container .speciality img {
         margin-top: 2%;
@@ -477,14 +480,14 @@ body {
         background: #4C428A;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 4px;
-        font-size: 24px;
+        font-size: 1.5em;
         padding: 5px 10px;
     }
     .about-mob .about-text {
         margin-top: 5%;
         line-height: 22px;
         font-weight: 100;
-        font-size: 16px;
+        font-size: 1em;
     }
     .socials-mob {
         margin-top: 5%;
@@ -500,6 +503,7 @@ body {
     .social-btn {
         padding-top: 10px;
         padding-bottom: 10px;
+        font-size: 1em;
         display: flex;
         align-items: center;
         align-content: center;
@@ -513,7 +517,7 @@ body {
         width: 100%;
     }
     .resume-mob {
-        margin-top: 5%;
+        margin-top: 6%;
         font-family: MontserratExtraBold;
         color: rgba(255, 251, 220, 1);
         padding: 10px 20px;
@@ -521,7 +525,8 @@ body {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 4px;
         animation: title-animation 1s ease-in-out;
-        margin-bottom: 10%;
+        margin-bottom: 6%;
+        font-size: 1em;
     }
 
     .social-btn.instagram {
@@ -535,5 +540,132 @@ body {
     }
     .social-btn.youtube {
         background: #d4122f;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .mountains img:nth-child(1) {
+        bottom: 35%;
+    }
+    .mountains img:nth-child(2) {
+        bottom: 0%;
+    }
+    .mountains img:nth-child(3) {
+        right: -70px;
+        bottom: 0px;
+        transform: translateY(0) translateX(2%);
+        width: 48.3%;
+    }
+    .info-container {
+        width: 50%;
+        bottom: 3%;
+    }
+    .title-container {
+        top: 15%;
+    }
+    .title-container .speciality {
+        font-size: 0.9em;
+    }
+    .title-container .name {
+        font-size: 2em;
+    }
+    .drumsticks {
+        margin-top: 40px;
+    }
+    .jeimip-logo {
+        margin-top: 70px;
+    }
+    .title-container .resume {
+        margin-top: 5%;
+    }
+
+    .socials {
+        margin-top: -80%;
+    }
+
+    .socials img:nth-child(1) {
+        margin-bottom: -60%;
+        margin-right: 10%;
+    }
+    .socials img:nth-child(2) {
+        margin-top: 46%;
+        width: 44px;
+        margin-right: 10%;
+    }
+    .socials img:nth-child(3) {
+        width: 42px;
+        margin-top: 28%;
+        margin-right: 10%;
+    }
+    .socials img:nth-child(4) {
+        margin-top: 10%;
+        margin-right: 10%;
+    }
+
+    @keyframes mountain1-animation {
+        0% {
+            transform: translateY(1000px);
+        } 
+        100% {
+            transform: translateY(240px);
+        }
+    }
+    @keyframes mountain2-animation {
+        0% {
+            transform: translateX(-60px) translateY(500px);
+        } 
+        100% {
+            transform: translateX(-60px) translateY(0px);
+        }
+    }
+    @keyframes moon-animation {
+        0% {
+            transform: translateY(800px);
+        } 
+        70% {
+            transform: translateY(10px);
+        }
+        100% {
+            transform: translateY(30px);
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .moon {
+        width: 80px;
+        left: 20%;
+        top: 5%;
+    }
+    .mountains img:first-child{
+        left: 0;
+        bottom: -50%;
+        animation: mountain1-animation 1.5s;
+        transform: translateY(0px);
+    }
+
+    @keyframes mountain1-animation {
+        0% {
+            transform: translateY(1000px);
+        } 
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    @keyframes mountain2-animation {
+        0% {
+            transform: translateX(0px) translateY(500px);
+        } 
+        100% {
+            transform: translateX(0px) translateY(0px);
+        }
+    }
+    
+    .mountains img:nth-child(2){
+        left: 0;
+        bottom: -30%;
+        width: 125vw;
+        animation: mountain2-animation 1s;
+        transform: translateY(0px);
     }
 }
