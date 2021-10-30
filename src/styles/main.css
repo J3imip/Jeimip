@@ -348,18 +348,19 @@ body {
     }
     .moon {
         width: 80px;
-        left: 10%;
+        left: 20%;
+        top: 5%;
     }
     .mountains img:first-child{
         left: 0;
-        bottom: 0;
+        bottom: -20%;
         animation: mountain1-animation 1.5s;
         transform: translateY(0px);
     }
     
     .mountains img:nth-child(2){
         left: 0;
-        bottom: 0;
+        bottom: -10%;
         width: 125vw;
         animation: mountain2-animation 1s;
         transform: translateY(0px);
@@ -447,11 +448,11 @@ body {
         width: 30%;
     }
     .title-container .name {
-        font-size: 98%;
+        font-size: 100%;
         padding-top: 5%;
     }
     .title-container .speciality {
-        margin-top: 2%;;
+        margin-top: 2%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -543,6 +544,236 @@ body {
     }
 }
 
+@media only screen and (max-width: 812px) and (orientation: landscape) {
+    @keyframes moon-animation {
+        0% {
+            transform: translateY(500px);
+        } 
+        70% {
+            transform: translateY(10px);
+        }
+        100% {
+            transform: translateY(30px);
+        }
+    }
+    @keyframes mountain1-animation {
+        0% {
+            transform: translateY(500px);
+        } 
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    @keyframes mountain2-animation {
+        0% {
+            transform: translateY(500px);
+        } 
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    .moon {
+        width: 80px;
+        left: 20%;
+        top: 5%;
+    }
+    .mountains img:first-child{
+        left: 0;
+        bottom: -20%;
+        animation: mountain1-animation 1.5s;
+        transform: translateY(0px);
+    }
+    
+    .mountains img:nth-child(2){
+        left: 0;
+        bottom: -10%;
+        width: 125vw;
+        animation: mountain2-animation 1s;
+        transform: translateY(0px);
+    }
+    .mountains img:nth-child(3){
+        display: none;
+    }
+    .langs img:nth-child(1) {
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        width: 60px;
+    }
+    
+    .langs img:nth-child(2) {
+        position: absolute;
+        top: 10%;
+        left: 30%;
+        width: 60px;
+    }
+    
+    .langs img:nth-child(3) {
+        position: absolute;
+        top: 29%;
+        left: 27%;
+        width: 60px;
+    }
+    
+    .langs img:nth-child(4) {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        width: 60px;
+    }
+    
+    .langs img:nth-child(5) {
+        position: absolute;
+        top: 20%;
+        left: 60%;
+        width: 60px;
+    }
+    
+    .langs img:nth-child(6) {
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        width: 60px;
+    }
+    
+    .langs img:nth-child(7) {
+        position: absolute;
+        top: 10%;
+        left: 76%;
+        width: 60px;
+    }
+    
+    .langs img:nth-child(8) {
+        position: absolute;
+        top: 0.5%;
+        left: 85%;
+        width: 60px;
+    }
+    .mobile-container {
+        overflow: hidden;
+        flex-direction: column;
+        position: fixed;
+        align-items: center;
+        display: flex;
+        top: 3%;
+        width: 90%;
+        height: 93%;
+        background: rgba(27, 27, 27, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        animation: title-animation 0.5s ease-in-out;
+        overflow: scroll;
+    }
+    .title-container {
+        position: initial;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        line-height: 30px;
+        margin-top: 5%;
+    }
+    .title-container img {
+        width: 20%;
+    }
+    .title-container .name {
+        font-size: 100%;
+        padding-top: 5%;
+    }
+    .title-container .speciality {
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 60%;
+    }
+    .title-container .speciality img {
+        margin-top: 2%;
+        width: 20px;
+        margin-right: 2px;
+    }
+    .about-mob {
+        margin-top: 5%;
+        color: rgba(255, 251, 220, 1);
+        font-family: RubikLight;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 88%;
+        animation: title-animation 1s ease-in-out;
+    }
+    .about-mob .about-title {
+        font-family: Montserrat;
+        font-weight: 700;
+        background: #4C428A;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        font-size: 150%;
+        padding: 5px 10px;
+    }
+    .about-mob .about-text {
+        margin-top: 5%;
+        line-height: 20px;
+        font-weight: 100;
+        font-size: 100%;
+    }
+    .socials-mob {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        animation: title-animation 1s ease-in-out;
+    }
+    .socials-mob img {
+        margin-left: 5%;
+        width: 20px;
+    }
+    .social-btn {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin-top: 2%;
+        background: rgba(91, 189, 160, 0.6);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        color: rgba(255, 251, 220, 1);
+        font-family: MontserratExtraBold;
+        border-radius: 4px;
+        width: 100%;
+    }
+    .resume-mob {
+        margin-top: 6%;
+        font-family: MontserratExtraBold;
+        color: rgba(255, 251, 220, 1);
+        padding: 10px 20px;
+        background: #4A47CD;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        animation: title-animation 1s ease-in-out;
+        margin-bottom: 6%;
+        font-size: 100%;
+    }
+
+    .social-btn.instagram {
+        background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    }
+    .social-btn.telegram {
+        background: linear-gradient(45deg, #33d4f0 0%,#3c75e6 25%,#2757dc 50%,#3423cc 75%,#4918bc 100%); 
+    }
+    .social-btn.github {
+        background: linear-gradient(45deg, #5633f0 0%,#3f3ce6 25%,#5727dc 50%,#234bcc 75%,#185abc 100%); 
+    }
+    .social-btn.youtube {
+        background: #d4122f;
+    }
+}
+
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     .mountains img:nth-child(1) {
         bottom: 35%;
@@ -561,13 +792,15 @@ body {
         bottom: 3%;
     }
     .title-container {
-        top: 15%;
+        top: 8%;
+        line-height: 38px;
+        animation: title-animation 1.5s ease-in-out;
     }
     .title-container .speciality {
         font-size: 0.9em;
     }
     .title-container .name {
-        font-size: 2em;
+        font-size: 1.8em;
     }
     .drumsticks {
         margin-top: 40px;
@@ -576,7 +809,12 @@ body {
         margin-top: 70px;
     }
     .title-container .resume {
-        margin-top: 5%;
+        margin-top: 7%;
+    }
+
+    .info-container .info {
+        font-size: 1.2em;
+        line-height: 28px;
     }
 
     .socials {
@@ -632,6 +870,9 @@ body {
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .title-container img {
+        width: 30%;
+    }
     .moon {
         width: 80px;
         left: 20%;
@@ -665,12 +906,16 @@ body {
         line-height: 45px;
     }
 
+    .title-container .name {
+        font-size: 200%;
+    }
+
     .about-mob .speciality{
-        font-size: 1.2em;
+        font-size: 80%;
     }
 
     .about-mob .about-title {
-        font-size: 2.5em;
+        font-size: 200%;
     }
 
     .about-mob .about-text {
@@ -678,15 +923,19 @@ body {
     }
 
     .socials-mob {
-        font-size: 1.5em;
+        font-size: 150%;
     }
 
     .about-mob .about-text {
-        font-size: 1.5em;
+        font-size: 150%;
     }
 
     .title-container .speciality{
-        font-size: 1.2em;
+        font-size: 120%;
+    }
+
+    .resume-mob {
+        font-size: 150%;
     }
 
     .mountains img:nth-child(2){

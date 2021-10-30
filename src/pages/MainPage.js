@@ -34,20 +34,29 @@ export default function MainPage() {
     const [mousePos, setMousePos] = useState({left:0, top: 0});
     const [move, setMove] = useState(false);
     const [limits, setLimits] = useState({x: 60, y: 240});
+    const [isMob, setIsMob] = useState(false);
 
     useEffect(() => {
         document.addEventListener('mousemove', (e)=>{setMousePos({left:e.pageX, top:e.pageY})});
+        window.addEventListener("resize", e=>{window.location.reload()});
 
-        console.log(window.innerWidth);
+        if(window.orientation==90 && window.innerWidth<=812) {
+            setIsMob(true);
+        }
 
         setInterval(() => {
             if(window.innerWidth>1024) setMove(true);
-            if(window.screen.orientation.type=="portrait-primary") setLimits({x: 0, y: 0});
+            try {
+                if(window.screen.orientation.type=="portrait-primary") setLimits({x: 0, y: 0});
+            } catch {
+                if(window.orientation==0) setLimits({x: 0, y: 0});
+            }
         }, 1500);
     }, [])
 
     return(
         <div className="main-container">
+            
             <img className="moon" src={Moon} alt=""/>
             {/* <div class="langs">
                 <img src={js} alt=""/>
@@ -74,7 +83,7 @@ export default function MainPage() {
                 }
             </div>
 
-            {window.innerWidth>768 ? 
+            {window.innerWidth>768 && !isMob ? 
                 <div>
                     <div class="title-container">
                         <div class="icons-row">
@@ -108,7 +117,9 @@ export default function MainPage() {
                             </div>
                         </div>
                     </div>    
-                </div> :
+                </div>
+
+                :
 
                 <div className="mobile-container">
                     <div class="title-container">
