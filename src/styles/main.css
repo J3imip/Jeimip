@@ -485,7 +485,7 @@ body {
     }
     .about-mob .about-text {
         margin-top: 5%;
-        line-height: 22px;
+        line-height: 20px;
         font-weight: 100;
         font-size: 1em;
     }
@@ -661,6 +661,34 @@ body {
         }
     }
     
+    .title-container {
+        line-height: 45px;
+    }
+
+    .about-mob .speciality{
+        font-size: 1.2em;
+    }
+
+    .about-mob .about-title {
+        font-size: 2.5em;
+    }
+
+    .about-mob .about-text {
+        line-height: 30px;
+    }
+
+    .socials-mob {
+        font-size: 1.5em;
+    }
+
+    .about-mob .about-text {
+        font-size: 1.5em;
+    }
+
+    .title-container .speciality{
+        font-size: 1.2em;
+    }
+
     .mountains img:nth-child(2){
         left: 0;
         bottom: -30%;
