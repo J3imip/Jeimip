@@ -38,9 +38,11 @@ export default function MainPage() {
     useEffect(() => {
         document.addEventListener('mousemove', (e)=>{setMousePos({left:e.pageX, top:e.pageY})});
 
+        console.log(window.innerWidth);
+
         setInterval(() => {
-            if(window.innerWidth<1024)setMove(true);
-            else if(window.screen.orientation.type=="portrait-primary") setLimits({x: 0, y: 0});
+            if(window.innerWidth>1024) setMove(true);
+            if(window.screen.orientation.type=="portrait-primary") setLimits({x: 0, y: 0});
         }, 1500);
     }, [])
 
